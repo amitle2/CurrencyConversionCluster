@@ -1,0 +1,33 @@
+{
+	"info": {
+		"_postman_id": "57cee02c-fde4-4f70-ae82-c4941d01d257",
+		"name": "CurrencyDict",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20764520"
+	},
+	"item": [
+		{
+			"name": "GetCurrency",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP}}:30080/convert/EUR",
+					"protocol": "http",
+					"host": [
+						"{{IP}}"
+					],
+					"port": "30080",
+					"path": [
+						"convert",
+						"EUR"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
