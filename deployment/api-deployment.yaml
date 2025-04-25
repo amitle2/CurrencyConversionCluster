@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currency-api
+  template:
+    metadata:
+      labels:
+        app: currency-api
+    spec:
+      containers:
+        - name: currency-api
+          image: localhost:5000/currency-api:latest
+          ports:
+            - containerPort: 3000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: currency-api
+spec:
+  selector:
+    app: currency-api
+  ports:
+    - protocol: TCP
+      port: 80 
+      targetPort: 3000 
+      nodePort: 30080 
+  type: NodePort

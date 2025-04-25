@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency-timer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currency-timer
+  template:
+    metadata:
+      labels:
+        app: currency-timer
+    spec:
+      containers:
+        - name: currency-timer
+          image: localhost:5000/currency-api:latest
+          command: ["npm", "run", "timer"]
