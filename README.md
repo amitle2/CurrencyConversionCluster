@@ -1,4 +1,4 @@
-# Currency Conversion Cluster
+# Currency Conversion Service
 
 A fast and scalable internal microservice for real-time currency exchange rates, optimized to reduce external API calls, network latency, and operational costs.
 
